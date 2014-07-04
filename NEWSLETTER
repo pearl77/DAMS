@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DAMS</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<style type="text/css">
+body{margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+*{margin:0px; padding:0px;}
+img{border:none;}
+
+.wrapper{width:550px; margin:0px auto; background:url('http://www.damsdelhi.com/images/border-left.gif') top left no-repeat; background-size:7px 2008px; overflow:hidden;}
+
+.element{float:left; width:auto; background:url('http://www.damsdelhi.com/images/border-right.gif') top right no-repeat; background-size:7px 2008px; border-top:7px solid #f15a22; /*border-bottom:7px solid #00a651; padding:18px;*/ padding:18px 18px 5px 18px; overflow:hidden;}
+.header, .middle, #arr, .footer{width:100%; float:left; overflow:hidden;}
+.header h1{background:url('http://www.damsdelhi.com/images/nam.gif') top center no-repeat; width:100%; height:60px; margin:0px auto 10px auto;}
+#logo{display:inline-block; width:116px; height:98px; background:url('http://www.damsdelhi.com/images/logo.gif') top left no-repeat;}
+#inner-header{display:inline-block; width:393px; vertical-align:top; background:url('http://www.damsdelhi.com/images/star.gif') top left no-repeat;}
+#inner-header p{width:auto; padding:22px; font-size:10.5px; font-weight:bold;}
+#inner-header span{color:#FFF; background:#f15f22; display:block; font-size:14px; font-style:italic; font-weight:bold; margin:1px 0 0; padding:4px 3px; border-radius:6px; -moz-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px; -webkit-border-radius:6px; text-align:center;}
+
+.middle h1{background:url('http://www.damsdelhi.com/images/course-heading.gif') top center no-repeat; width:430px; height:40px; margin:15px auto 10px auto;}
+.middle ul{width:auto; overflow:hidden;}
+.middle ul li{list-style:none; font-size:10.5px; margin:0px 0px 10px 0px; font-weight:bold; overflow:hidden;}
+.middle ul li span{display:inline-block; float:left;}
+.middle ul li span.s1{background:#ed1c24; font-size:13px; padding:10px 0px 10px 8px; color:#FFF; text-transform:uppercase; width:189px; border-top:1px solid #000; border-bottom:1px solid #000; border-left:1px solid #000; border-radius:6px 0px 0px 6px; -moz-border-radius:6px 0px 0px 6px; -ms-border-radius:6px 0px 0px 6px; -o-border-radius:6px 0px 0px 6px; -webkit-border-radius:6px 0px 0px 6px;}
+.middle ul li span.s2{width:28px; height:38px; background:url('http://www.damsdelhi.com/images/span-right.gif') top right no-repeat;}
+.middle ul li span.s3{border-bottom:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; padding:4px 8px 4px 0px; text-align:justify; width:278px; border-radius:0px 6px 6px 0px; -moz-border-radius:0px 6px 6px 0px; -ms-border-radius:0px 6px 6px 0px; -o-border-radius:0px 6px 6px 0px; -webkit-border-radius:0px 6px 6px 0px;}
+#arr{overflow:hidden; margin:6px 0px 8px 0px;}
+#arr a{display:block; width:160px; margin:0px auto 10px auto; padding:6px 9px 9px 9px; text-align:center; color:#FFF; text-decoration:none; font-weight:bold; font-size:30px; border-radius:6px; -moz-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px; -webkit-border-radius:6px; position:relative; background:#f15a22; }
+#arr a:active{-webkit-box-shadow:0px 0px 0px rgba(219,31,5,1); -moz-box-shadow:0px 0px 0px rgba(219,31,5,1); box-shadow:0px 0px 0px rgba(219,31,5,1); position:relative; top:3px;}
+
+.footer{border-top:7px solid #00a651; border-right:7px solid #00a651; border-bottom:7px solid #00a651; padding:30px 18px 18px; width:92.35% !important;}
+.footer span{display:block; width:200px; margin:-30px auto 5px auto; text-align:center; font-size:20px; color:#FFF; background:#f15a22; padding:7px 12px;  border-radius:6px; -moz-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px; -webkit-border-radius:6px;}
+.footer p{padding:10px; border:4px solid #f15a22; border-radius:6px; -moz-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px; -webkit-border-radius:6px; text-align:center; font-weight:bold; font-size:16px;}
+
+.formDiv{font-size:16px;font-weight: bold; color:#333; width:100%; float:left; margin-bottom:15px;}
+.formFill{ padding:3px 0 3px 4px; border:1px solid #666; border-radius:4px;width:136px;}
+.formSel{ padding:4px 0px; width:142px;border:1px solid #666; border-radius:4px;}
+.empty{ width:auto; padding:10px 0px;}
+#sub{ display:block; margin:0 auto;background:#ed1c24;border-radius:6px; -moz-border-radius:6px; -ms-border-radius:6px; -o-border-radius:6px; -webkit-border-radius:6px;padding:7px 12px; text-align:center; color:#FFF;font-size:20px; border:none; cursor:pointer;}
+label, .formFill, .formSel{ display:inline-block; float:left;}
+.leftLb{ width:70px;}
+.rightLb{ width:100px; margin-left:10%;}
+.focs{ border:1px solid #ed1c24;}
+</style>
+<style type="text/css">
+.noscroll {
+  width:500px;
+  height:400px;
+  overflow: auto; /* or hidden, or visible */
+}
+}
+</style>
+<body>
+  <div class="wrapper">
+    <div class="element">  
+       <div class="header">
+            <h1>&nbsp;</h1>
+            <div id="logo">&nbsp;</div>
+            <div id="inner-header">
+                 <p>AIPG (NBE Pattern) / AIIMS / PGI / DNB / UPSC / USMLE / NIMHANS /<br />State PG Entrance Examination &amp; MCI-Screening Examinations</p>
+                 <span>Mentoring Doctors for Holistic success since last 15 Years</span>
+            </div>
+       </div>
+       <div class="middle">
+            <h1>&nbsp;</h1>
+            <ul>
+                <li><span class="s1">Regular Course</span><span class="s2"></span><span class="s3">For Interns &amp; Post Interns<br /><br /></span></li>
+                <li><span class="s1">Foundation Course</span><span class="s2"></span><span class="s3">For Final &amp; Pre-Final Year Students<br /><br /></span></li>
+                <li><span class="s1">Pre-Foundation Course</span><span class="s2"></span><span class="s3">For 2nd Prof students<br /><br /></span></li>
+                <li><span class="s1">The First Step Course</span><span class="s2"></span><span class="s3">For 1st Prof students<br /><br /></span></li>
+                <li><span class="s1">Test &amp; Discussion Course</span><span class="s2"></span><span class="s3">At Delhi, Mumbai, Kolkata, Aurangabad &amp; Rohtak<br /><br /></span></li>
+                <li><span class="s1">iDAMS</span><span class="s2"></span><span class="s3">Tablet Based Learning Programme<br /><br /></span></li>
+                <li><span class="s1">Combo Test Series</span><span class="s2"></span><span class="s3">Subject-wise Test Series + Grand Test Series<br /><br /></span></li>
+                <li><span class="s1">Postal Course</span><span class="s2"></span><span class="s3">Distance Learning Programme<br /><br /></span></li>
+            </ul>
+            <div class="empty">
+            
+<!-- ENQUIRY FORM -->
+
+<iframe src="https://docs.google.com/forms/d/1RcLwNZAk2FIp4k-nHMqDy8F7Z_4jaNKTmJgG3B_ZhQc/viewform?embedded=true" width="500" height="366" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+<!-- ENQUIRY FORM -->
+
+            
+            </div>
+       </div>
+    </div>
+    <div class="footer">
+         <p>
+            <span>DAMS HEAD OFFICE</span>
+            4-B, 3rd Floor, Grover's Building, Pusa Road, Near Karol Bagh<br />Metro Station, New Delhi -110005<br />E-mail: info@damdelhi.com, Website : www.damsdelhi.com
+         </p>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  	    function validate(){
+           var x = document.getElementById("name").value;
+		   var y = document.getElementById("contact").value;
+           var z = document.getElementById("email").value;            
+      	   var sel = document.getElementById("selectF").value;
+           var atpos=z.indexOf("@");
+           var dotpos=z.lastIndexOf(".");
+			$("input").removeClass("focs");
+			$("#selectF").removeClass("focs");
+            if(x == ''){
+               alert("Enter your name");
+			   $("#name").addClass("focs");
+			   $("#name").focus();				
+               return false ;
+            }else if(!isNaN(x)){
+               alert("Enter alphabates only")
+			   $("#name").focus();
+			   $("#name").addClass("focs");
+               return false; 
+            }else if(y == ''){
+               alert("Enter your Contact No.");
+			   $("#contact").focus();
+			   $("#contact").addClass("focs");
+               return false ;
+            }else if(isNaN(y)){
+               alert("Enter numeric value")
+			   $("#contact").focus();
+			   $("#contact").addClass("focs");
+               return false; 
+            }else if(y.length<10){
+               alert("enter 10 characters");
+			   $("#contact").focus();
+			   $("#contact").addClass("focs");
+               return false;
+            }else if(z == ''){
+               alert("Enter your emailId");
+			   $("#email").focus();
+			   $("#email").addClass("focs");
+               return false ;
+            }else if(atpos<1 || dotpos<atpos+2 || dotpos+2>=z.length){
+               alert("Invalid email format");
+			   $("#email").focus();
+			   $("#email").addClass("focs");
+               return false;
+           }else if(sel == ''){
+               alert("Select your Course");
+			   $("#selectF").focus();
+			   $("#selectF").addClass("focs");
+               return false ;
+           }else{
+        	var name = $("#name").val()
+		var contact = $("#contact").val()        
+		var email = $("#email").val()
+        	var course = $("#selectF").val()
+        	var dataString = 'name='+ name +'&contactNumber='+contact +'&email=' + email + '&course=' + course;
+       	 $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: dataString,
+            success: function(){
+            alert("Mail has been Sent");
+	    document.getElementById("mailSend").reset();	
+            }
+        });
+        return false;
+          }	
+        }
+</script>
+</html>
